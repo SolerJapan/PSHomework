@@ -1,0 +1,16 @@
+pre { 
+   font-size: 14px;
+}
+div {
+  display: none;
+}
+li {
+  color: blue;
+  
+}
+#Main{
+  text-align: center;
+}
+h1{
+	text-align: center;
+}
