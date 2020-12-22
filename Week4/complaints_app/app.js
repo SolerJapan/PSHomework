@@ -6,11 +6,13 @@ $(() => {
 		event.preventDefault();
         const userInput = $(event.target).val();
         let userInput2 = $('input[type="number"]').val();
-		console.log(userInput)     
+		console.log(userInput);    
+		//set default input value to 10 if nothing is input
 		if (userInput2 ==""){
 		    userInput2 = 10;
 		}
 		
+		//if to make it so the the clicking any of the 5 buttons reset the output
 	if($(event.target).val() =="MANHATTAN"||$(event.target).val() =="BRONX"||
 	   $(event.target).val() =="BROOKLYN"||$(event.target).val() =="QUEENS"||
 	   $(event.target).val() =="STATEN ISLAND")
@@ -30,7 +32,7 @@ $(() => {
 			    var count = 0;
 				for (let index = 0; index < data.length; index++) {
 					if (count < Number(userInput2)) {
-					
+					//this outputs the data on screen after pressing the any of the bourough buttons
 					$('ol').append(`
 						<li =main>
 						<strong></strong><span id="borough">${
