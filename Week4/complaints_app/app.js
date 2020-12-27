@@ -72,10 +72,11 @@ function response(x) {
     'slow'
   );
 }
+// originally for reset but not used
 function resetForms() {
     $('ol').clear
 }
-
+// originally for reset but not used
 function myReset() {
   location.reload(true);
 }
