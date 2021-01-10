@@ -1,0 +1,87 @@
+
+/* variables for color */
+:root {
+  --dark-cerulean: #124e78;
+  --maastricht-blue: #0b132b;
+
+  --gray: gray;
+  --sea-serpent: #5bc0be;
+  --aquamarine: #6fffe9;
+  --black: black;
+}
+
+html {
+  background: var(--gray);
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+
+.container > div {
+  display: grid;
+  justify-content: space-around;
+  min-height: 60vh;
+
+
+}
+
+.border {
+  flex-basis: 80%;
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw;
+  grid-template-rows: 15vw 15vw 10vw;
+
+
+}
+
+.p1{
+
+}
+
+.sidebar{
+
+    grid-area: span 3 / span 1;
+    text-align: center;
+
+}
+
+.visitor{
+  grid-area: span 2 / span 3;
+}
+
+.analysis{
+  grid-area: span 1 / span 1;
+  text-align: center;
+}
+
+.rating{
+  grid-area: span 1 / span 1;
+  text-align: center;
+}
+
+.review{
+  grid-area: span 1 / span 1;
+  text-align: center;
+}
+
+.border  div {
+
+  border: 20px solid var(--black);
+}
+
+h4 {
+  text-align: center;
+  flex-basis: 100%;
+  align-self: center;
+}
+
+
+h1 {
+
+  color: var(--black);
+  text-align: center;
+
+}
