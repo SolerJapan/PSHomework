@@ -76,7 +76,7 @@ console.log("submit");
         Units<input id ="units" onChange= { this.itemChange} type='text' value = {this.state.units} ></input><br/><br/>
         <button>submit </button>
       </form>
-    // renders the list
+    {/* renders list */}
       <div id = "yellow">
          <ul>
            {this.state.groceries.map((grocery) => !grocery.isPurchased ?
