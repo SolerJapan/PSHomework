@@ -19,7 +19,7 @@ const groceries = [
     brand:'Nagoya',
     units:'8 oz',
     quantity:1,
-    isPurchased: true
+    isPurchased: false
   }
 ]
 
@@ -29,7 +29,8 @@ class App extends React.Component {
      groceries,
      item:"",
      brand:"",
-     units:""
+     units:"",
+     isPurchased: false
    }
    itemChange = (event) =>{
 
@@ -38,6 +39,19 @@ class App extends React.Component {
        [event.target.id]: event.target.value
      }
    )}
+
+   togglePurchased(){
+   if (this.grocery.state.isPurchased =true){
+     this.setState = ({
+       isPurchased: false
+     });
+   }
+   else{
+     this.grocery.setState = ({
+       isPurchased: true
+     })
+   }
+}
 // submit will not refresh and will input the items that are on the list
    submit = (event) =>{
        event.preventDefault()
@@ -51,6 +65,8 @@ console.log("submit");
 
    }
 
+
+
      this.setState(
        {
 
@@ -59,7 +75,8 @@ console.log("submit");
           ],
           item:"",
           brand:"",
-          units:""
+          units:"",
+          isPurchased: false
        }
 
      )
@@ -76,14 +93,16 @@ console.log("submit");
         Units<input id ="units" onChange= { this.itemChange} type='text' value = {this.state.units} ></input><br/><br/>
         <button>submit </button>
       </form>
-    {/* renders list */}
+      {/* renders list */}
       <div id = "yellow">
+
          <ul>
            {this.state.groceries.map((grocery) => !grocery.isPurchased ?
              <li>{grocery.item}
              <ul>{grocery.brand}</ul>
              <ul>{grocery.units}</ul>
-             </li> :"")}
+             <ul><button className="bought-button" onClick={this.togglePurchased}> Remove </button></ul>
+             </li> : null)}
 
          </ul>
 
