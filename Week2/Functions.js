@@ -1,3 +1,4 @@
+// returns the larger of 2 numbers
 function maxOfTwoNumbers (a,b)
 {
    if(a>b)
@@ -11,7 +12,7 @@ function maxOfTwoNumbers (a,b)
    else
    return a;
 };
-
+// returns the larger of 3 numbers
 function maxOfThree(a,b,c)
 {
   if(a>b && a>c)
@@ -30,7 +31,7 @@ function maxOfThree(a,b,c)
     return a;
 
 };
-
+// returns true if character is vowel else false
 function isCharacterAVowel(str)
 {
   if(str=="a" || str=="e" || str=="i" || str=="o" || str=="u")
@@ -40,7 +41,7 @@ function isCharacterAVowel(str)
   else
     return false;
 };
-
+// returns the sum of the array
 function sumArray(a)
 {
   let sum=0;
@@ -51,6 +52,7 @@ function sumArray(a)
   }
   return sum;
 }
+// returns the multiplied total 
 function multiplyArray(a)
 {
   let mult=1;
@@ -61,7 +63,7 @@ function multiplyArray(a)
   }
   return mult;
 };
-
+// returns the string in reverse
 function reverseString(str)
 {
   let newstr='';
@@ -74,7 +76,7 @@ function reverseString(str)
   }
   return newstr;
 };
-
+// returns the longest word 
 function findLongestWord(str)
 {
     var long = "";
@@ -93,7 +95,7 @@ function findLongestWord(str)
     }
     return long.length;
 }
-
+// returns the longest word out of an array of words
 function findLongestWords(str, i)
 {
   var newWord=[];
